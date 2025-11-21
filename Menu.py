@@ -1,37 +1,43 @@
 from Listapersonas import Listapersonas
 import os
 
-def limpiar():
-    os.system("cls" if os.name == "nt" else "clear")
+class Menu:
+    def __init__(self):
+        self.lista = Listapersonas()
 
-def menu():
-    lista = Listapersonas()
+    def limpiar(self):
+        os.system("cls" if os.name == "nt" else "clear")
 
-    while True:
-        limpiar()
-        print("1️Registrar persona")
-        print("2️Buscar personas por tipo de documento")
-        print("3️Salir")
-        print("====================================")
+    def mostrar_menu(self):
+        while True:
+            self.limpiar()
+           
+            print("1.Registrar persona: ")
+            print("2.Buscar personas por tipo de documento: ")
+            print("3.Sali: ")
 
-        opcion = input("Seleccione una opción: ")
+            opcion = input("Seleccione una opción: ")
 
-        if opcion == "1":
-            limpiar()
-            lista.registrar_persona()
-            input("Presione ENTER para continuar...")
+            if opcion == "1":
+                self.limpiar()
+                self.lista.registrar_persona()
+                input("\nPresione ENTER para continuar...")
 
-        elif opcion == "2":
-            limpiar()
-            lista.buscar_por_tipo_documento()
-            input("Presione ENTER para continuar...")
+            elif opcion == "2":
+                self.limpiar()
+                self.lista.buscar_por_tipo_documento()
+                input("\nPresione ENTER para continuar...")
 
-        elif opcion == "3":
-            limpiar()
-            print("Gracias por usar el sistema. Hasta luego.")
-            break
+            elif opcion == "3":
+                self.limpiar()
+                print("Gracias por usar el sistema. Hasta luego.")
+                break
 
-        else:
-            limpiar()
-            print("Opción no válida. Intente nuevamente.")
-            input("Presione ENTER para continuar...")
+            else:
+                self.limpiar()
+                print("Opción no válida. Intente nuevamente.")
+                input("\nPresione ENTER para continuar...")
+
+if __name__ == "__main__":
+    menu = Menu()
+    menu.mostrar_menu()

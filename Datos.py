@@ -1,6 +1,6 @@
-class Persona:
-    def _init_(self, nombre, apellido, documento, tipo_doc):
+class Datos:
+    def __init__(self, nombre, apellido, tipo_doc, documento):
         self.nombre = nombre
         self.apellido = apellido
-        self.documento = documento
         self.tipo_doc = tipo_doc
+        self.documento = documento
