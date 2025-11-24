@@ -38,7 +38,3 @@ class Menu:
 
 menu = Menu()
 menu.mostrar_menu()
-
-
-
-#hola como estas 
