@@ -13,11 +13,9 @@ class Menu:
             self.limpiar()
             print("--- MENÚ PRINCIPAL ---")
             print("1. Registrar persona")
-            print("2. Buscar personas por tipo de documento")
-            print("3. Agregar persona")
-            print("4. Eliminar persona")
+            print("2. Buscar persona por número de documento")
             print("5. Salir")
-
+            
             opcion = input("Seleccione una opción: ").strip()
 
             if opcion == "1":
@@ -27,28 +25,17 @@ class Menu:
 
             elif opcion == "2":
                 self.limpiar()
-                self.lista.buscar_por_tipo_documento()
-                input("\nPresione ENTER para continuar...")
-
-            elif opcion == "3":
-                self.limpiar()
-                self.lista.agregar_persona()
-                input("\nPresione ENTER para continuar...")
-
-            elif opcion == "4":
-                self.limpiar()
-                self.lista.eliminar_persona()
-                input("\nPresione ENTER para continuar...")
+                self.lista.buscar_por_documento()
+                input("Presione ENTER para continuar...")
 
             elif opcion == "5":
-                self.limpiar()
-                print("Gracias por usar el sistema. Hasta luego.")
+                print("Saliendo...")
                 break
 
             else:
-                self.limpiar()
-                print("Opción no válida. Intente nuevamente.")
-                input("\nPresione ENTER para continuar...")
+                print("Opción inválida.")
+                input("Presione ENTER para continuar...")
+
 
 if __name__ == "__main__":
     menu = Menu()
