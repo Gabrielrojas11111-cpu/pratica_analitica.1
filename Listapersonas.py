@@ -26,14 +26,14 @@ class Listapersonas:
         try:
             doc = int(input("Ingrese el número de documento: "))
         except:
-            print("\nERROR: Debe ingresar un número.\n")
+            print("ERROR: Debe ingresar un número.")
             return
 
-        print("\n--- RESULTADOS ---")
+        print("--- RESULTADOS ---")
         for p in self.lista:
             if p.documento == doc:
                 print(f"{p.nombre} {p.apellido} - Tipo: {p.tipo_doc} - Documento: {p.documento}")
                 return
         
-        print("No se encontró ninguna persona con ese documento.\n")
+        print("No se encontró ninguna persona con ese documento.")
  
