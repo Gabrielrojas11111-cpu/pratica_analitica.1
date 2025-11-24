@@ -12,16 +12,16 @@ class Menu:
         while True:
             self.limpiar()
             print("--- MENÚ PRINCIPAL ---")
-            print("1. Registrar persona")
-            print("2. Buscar persona por número de documento")
-            print("5. Salir")
+            print("1. Registrar persona:")
+            print("2. Buscar persona por número de documento:")
+            print("5. Salir:")
             
             opcion = input("Seleccione una opción: ").strip()
 
             if opcion == "1":
                 self.limpiar()
                 self.lista.registrar_persona()
-                input("\nPresione ENTER para continuar...")
+                input("Presione ENTER para continuar...")
 
             elif opcion == "2":
                 self.limpiar()
@@ -36,7 +36,5 @@ class Menu:
                 print("Opción inválida.")
                 input("Presione ENTER para continuar...")
 
-
-if __name__ == "__main__":
-    menu = Menu()
-    menu.mostrar_menu()
+menu = Menu()
+menu.mostrar_menu()
